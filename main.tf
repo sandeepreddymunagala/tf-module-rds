@@ -1,4 +1,4 @@
-/*resource "aws_security_group" "main" {
+resource "aws_security_group" "main" {
   name        = "${var.component}-${var.env}-sg"
   description = "${var.component}-${var.env}-sg"
   vpc_id      = var.vpc_id
@@ -22,7 +22,7 @@
     Name = "${var.component}-${var.env}-sg"
   }
 }
-*/
+
 resource "aws_db_subnet_group" "main" {
   name       = "${var.component}-${var.env}"
   subnet_ids = var.subnet_ids
